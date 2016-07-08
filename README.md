@@ -29,6 +29,7 @@ All file paths in the steps below reference the Magento root.
  3. Create this directory: **./downloader/lib/local** 
  4. Create a file called **./downloader/mageX.php** and place the following contents in that file:
 
+
         <?php
         /** Store and unset $argv so that mage.php will not execute */
         $storedArgv = $argv;
@@ -92,7 +93,7 @@ All file paths in the steps below reference the Magento root.
             /*public function run()
             {
                 $testClass = new My_Class_Name_Is_Here();
-                $testClass->killAndOutput("This");*/
+                $testClass->killAndOutput("This");
                 parent::run(); 
             }*/
         
@@ -101,6 +102,7 @@ All file paths in the steps below reference the Magento root.
         if(defined('STDIN') && defined('STDOUT') && (defined('STDERR'))) {
             __cli_Mage_ConnectX::instance()->init($argv)->run();
         }
+
 
 
 
